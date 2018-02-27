@@ -4,10 +4,11 @@ interface Todo
     id: number;
 }
 
-class TodoControl implements Todo
+class TodoControl
 {
-    content : "やること";
-    id : 114514;
+
+    todolist: Todo[];
+    todo_latest: number = 0;
 
     complete(){
         console.log("complete todo");
@@ -16,6 +17,10 @@ class TodoControl implements Todo
     add ()
     {
         console.log("add todo");
+        let newtodo: Todo = {
+            content : "やること",
+            id : 114514
+        }
     }
 
     show()
