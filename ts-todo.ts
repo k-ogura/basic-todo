@@ -47,8 +47,19 @@ class TodoControl
     // ToDoの追加処理つまりリストの末尾にTodoを追加
     add (todo_txt : string) : void
     {
-        // 最新のToDoのidに1加える
-        const todo_latest : number = this.todolist[this.todolist.length - 1].id + 1;
+        // 追加するToDoのidを格納
+        let todo_latest : number;
+        // 既存のToDoがある
+        if (this.todolist.length > 0)
+        {
+            // 最新のToDoのidに1加える
+            todo_latest = this.todolist[this.todolist.length - 1].id + 1;
+        }
+        // 既存のToDoがない
+        else
+        {
+            todo_latest = 0;
+        }
 
         // 追加するToDoデータの用意
         const new_todo : Todo = {
