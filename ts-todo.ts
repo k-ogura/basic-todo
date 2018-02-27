@@ -9,6 +9,8 @@ class TodoControl implements Todo
     content : "やること";
     id : 114514;
 
+    todolist: Todo[];
+
     complete(){
         console.log("complete todo");
     }
@@ -16,6 +18,9 @@ class TodoControl implements Todo
     add ()
     {
         console.log("add todo");
+        newtodo:Todo = {
+            
+        }
     }
 
     show()
